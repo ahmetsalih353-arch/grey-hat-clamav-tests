@@ -1,0 +1,25 @@
+# 🛡️ ClamAV Test Süreci | ClamAV Testing Process
+
+Bu belge, ClamAV antivirüs sisteminin test sürecini, yapılandırma adımlarını ve gözlemleri içermektedir.
+
+## ⚙️ Kurulum | Installation
+
+- `sudo apt install clamav clamav-daemon`
+- `sudo freshclam` ile virüs veritabanı güncellendi
+
+## 🧪 Test Süreci | Testing
+
+- EICAR test dosyası ile temel algılama denemesi
+- Gerçek zamanlı tarama ve manuel tarama farkları gözlemlendi
+- `clamscan -r /home/kullanici` komutu ile sistem tarandı
+
+## 📊 Gözlemler | Observations
+
+- CPU kullanımı düşük, tarama süresi ortalama
+- Yanlış pozitif oranı düşüktü
+- Log dosyaları `/var/log/clamav/` altında incelendi
+
+## 📁 İlgili Belgeler | Related Docs
+
+- [X11 Testleri | X11 Testing](x11-testleri.md)
+- [Phishing Simülasyonu | Phishing Simulation](phishing-simulasyon.md)
